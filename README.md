@@ -22,6 +22,7 @@ Personal website showcasing my profile as a Systems Engineering student, with a 
 
 ## 📁 Project Structure
 
+```
 developer-portfolio/
 ├── assets/
 │   ├── css/
@@ -33,8 +34,8 @@ developer-portfolio/
 ├── index.html
 ├── CNAME
 └── README.md
+```
 
----
 
 ## 📌 Overview
 
