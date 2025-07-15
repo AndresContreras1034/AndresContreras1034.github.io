@@ -1,4 +1,17 @@
-/* Reset general */
+/* ================================
+   🌐 Global Styles & Reset
+================================= */
+:root {
+  --bg-main: #0d1117;
+  --bg-secondary: #161b22;
+  --bg-card: #21262d;
+  --bg-hover: #30363d;
+  --text-main: #e6edf3;
+  --text-muted: #8b949e;
+  --accent: #58a6ff;
+  --accent-hover: #1f6feb;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -11,18 +24,20 @@ html {
 
 body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background: #0d1117;
-  color: #e6edf3;
+  background: var(--bg-main);
+  color: var(--text-main);
   line-height: 1.6;
 }
 
-/* NAVBAR */
+/* ================================
+   🔝 Navbar
+================================= */
 .nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 1rem 2rem;
-  background: #161b22;
+  background: var(--bg-secondary);
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
   position: sticky;
   top: 0;
@@ -32,7 +47,7 @@ body {
 .logo {
   font-size: 1.5rem;
   font-weight: bold;
-  color: #58a6ff;
+  color: var(--accent);
 }
 
 .nav-links {
@@ -42,23 +57,25 @@ body {
 }
 
 .nav-links a {
-  color: #e6edf3;
+  color: var(--text-main);
   text-decoration: none;
-  transition: 0.3s;
+  transition: color 0.3s;
 }
 
 .nav-links a:hover {
-  color: #58a6ff;
+  color: var(--accent);
 }
 
-/* HERO SECTION */
+/* ================================
+   🚀 Hero Section
+================================= */
 .hero {
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
   padding: 4rem 2rem;
-  background: linear-gradient(135deg, #161b22, #0d1117);
+  background: linear-gradient(135deg, var(--bg-secondary), var(--bg-main));
 }
 
 .hero-text h1 {
@@ -69,22 +86,22 @@ body {
 .hero-text p {
   font-size: 1.2rem;
   margin-bottom: 1.5rem;
-  color: #8b949e;
+  color: var(--text-muted);
 }
 
 .btn {
   padding: 0.8rem 1.5rem;
-  background: #58a6ff;
+  background: var(--accent);
   color: #fff;
   border: none;
   border-radius: 6px;
   text-decoration: none;
   font-weight: bold;
-  transition: 0.3s;
+  transition: background 0.3s;
 }
 
 .btn:hover {
-  background: #1f6feb;
+  background: var(--accent-hover);
 }
 
 .hero-img {
@@ -98,7 +115,9 @@ body {
   50% { transform: translateY(-10px); }
 }
 
-/* SECTIONS */
+/* ================================
+   📄 Sections
+================================= */
 .section {
   padding: 3rem 2rem;
   max-width: 1000px;
@@ -109,7 +128,7 @@ body {
   text-align: center;
   margin-bottom: 2rem;
   font-size: 2rem;
-  color: #58a6ff;
+  color: var(--accent);
 }
 
 .section p {
@@ -118,7 +137,9 @@ body {
   text-align: center;
 }
 
-/* TECHNOLOGIES */
+/* ================================
+   💻 Technologies
+================================= */
 .tech-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
@@ -128,19 +149,21 @@ body {
 }
 
 .tech-grid span {
-  background: #21262d;
+  background: var(--bg-card);
   padding: 0.5rem 1rem;
   border-radius: 5px;
   color: #c9d1d9;
   font-weight: 500;
-  transition: 0.3s;
+  transition: background 0.3s;
 }
 
 .tech-grid span:hover {
-  background: #30363d;
+  background: var(--bg-hover);
 }
 
-/* PROJECTS */
+/* ================================
+   🚀 Projects
+================================= */
 .project-grid {
   display: grid;
   gap: 2rem;
@@ -149,10 +172,10 @@ body {
 }
 
 .project-card {
-  background: #21262d;
+  background: var(--bg-card);
   padding: 1.5rem;
   border-radius: 8px;
-  border: 1px solid #30363d;
+  border: 1px solid var(--bg-hover);
   transition: transform 0.3s;
 }
 
@@ -161,21 +184,21 @@ body {
 }
 
 .project-card h3 {
-  color: #58a6ff;
+  color: var(--accent);
   margin-bottom: 0.5rem;
 }
 
 .project-card span {
   display: block;
   margin-top: 0.8rem;
-  color: #8b949e;
+  color: var(--text-muted);
   font-size: 0.9rem;
 }
 
 .project-card a {
   display: inline-block;
   margin-top: 1rem;
-  color: #58a6ff;
+  color: var(--accent);
   text-decoration: none;
   font-weight: bold;
 }
@@ -184,7 +207,9 @@ body {
   text-decoration: underline;
 }
 
-/* CONTACT */
+/* ================================
+   📫 Contact
+================================= */
 .contact-links {
   display: flex;
   flex-wrap: wrap;
@@ -194,26 +219,28 @@ body {
 }
 
 .contact-links a {
-  background: #30363d;
-  color: #e6edf3;
+  background: var(--bg-hover);
+  color: var(--text-main);
   padding: 0.6rem 1rem;
   border-radius: 6px;
   text-decoration: none;
   font-size: 0.95rem;
-  transition: 0.3s;
+  transition: background 0.3s, color 0.3s;
 }
 
 .contact-links a:hover {
-  background: #58a6ff;
+  background: var(--accent);
   color: #fff;
 }
 
-/* FOOTER */
+/* ================================
+   🔻 Footer
+================================= */
 .footer {
   text-align: center;
   padding: 2rem 1rem;
   font-size: 0.9rem;
-  background: #161b22;
-  color: #8b949e;
+  background: var(--bg-secondary);
+  color: var(--text-muted);
 }
 
