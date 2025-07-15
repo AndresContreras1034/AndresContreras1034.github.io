@@ -1,25 +1,27 @@
+```mermaid
 graph TD
 
-Inicio([Idea: Crear un portafolio web]) --> HTML[index.html: Contenido principal]
-Inicio --> CSS[styles.css: Estilos visuales]
-Inicio --> JS[main.js: Interacciones]
+Start([Inicio: Crear un portafolio web]) --> HTML[index.html: Estructura del contenido]
+Start --> CSS[styles.css: Estilos visuales]
+Start --> JS[main.js: Funciones e interacciones]
 
 subgraph Proyecto Web
-  HTML --> Repositorio[Repositorio: AndresContreras1034.github.io]
-  CSS --> Repositorio
-  JS --> Repositorio
+  HTML --> Repo[Repositorio: AndresContreras1034.github.io]
+  CSS --> Repo
+  JS --> Repo
 end
 
-Repositorio --> GitHubPages[GitHub Pages: Hosting estático]
-GitHubPages --> WebPublicada[andrescontreras1034.github.io]
+Repo --> GitHubPages[GitHub Pages: Hosting estático]
+GitHubPages --> Publicado[andrescontreras1034.github.io]
 
 subgraph Dominio Personalizado
   CNAME[CNAME: Archivo con dominio personalizado]
-  DNS[Configuración DNS en el proveedor]
+  DNS[DNS configurado en Namecheap]
   DNS --> GitHubPages
   CNAME --> GitHubPages
 end
 
-GitHubPages --> WebConDominio[andrescontreras1034.io o similar]
+GitHubPages --> DominioFinal[andrescontreras1034.me]
+DominioFinal --> Final([Sitio en línea accesible])
 
-WebConDominio --> Final([Sitio en línea con dominio propio])
+```
